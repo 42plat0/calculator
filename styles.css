@@ -3,6 +3,7 @@
     padding: 0;
 }
 body{
+    touch-action: pan-x pan-y;
     height: 100vh;
     background: linear-gradient(to right, #89e15d, #78c7eb);
     display: grid;
