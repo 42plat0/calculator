@@ -4,7 +4,7 @@
 }
 body{
     height: 100vh;
-    background: linear-gradient(to right, #f8ec62, #fd5757);
+    background: linear-gradient(to right, #89e15d, #78c7eb);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -45,7 +45,7 @@ body{
     color: rgba(255, 255, 255, 0.75)
 }
 .current-operand{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
 }
 .span-two{
