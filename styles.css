@@ -19,7 +19,7 @@ body{
     background-color: black;
     border-radius: 15px;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(6, 100px);
+    grid-template-rows: minmax(100px, auto)repeat(5, 100px);
 }
 .calculator-grid button{
     border: none;
@@ -36,6 +36,8 @@ body{
     align-items: flex-end;
     justify-content: space-around;
     padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .previous-operand{
     font-size: 1.5rem;
