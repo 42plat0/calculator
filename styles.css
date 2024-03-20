@@ -19,7 +19,7 @@ body{
     background-color: black;
     border-radius: 15px;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto)repeat(5, 100px);
+    grid-template-rows: minmax(150px, auto)repeat(5, 100px);
 }
 .calculator-grid button{
     border: none;
@@ -40,11 +40,11 @@ body{
     word-break: break-all;
 }
 .previous-operand{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgba(255, 255, 255, 0.75)
 }
 .current-operand{
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: white;
 }
 .span-two{
