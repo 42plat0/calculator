@@ -10,7 +10,7 @@ class Calculator{
 
     appendNumber(number){
         if(number === "." && this.currentOperand.includes(".")) return;
-        this.currentOperand = this.currentOperand.toString() + number.toString();
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     deleteNumber(){
@@ -30,9 +30,29 @@ class Calculator{
         this.previousOperand = this.currentOperand;
         this.currentOperand = ""
     }
+    displayTextComma(num){
+        const stringNumber = num.toString();
+        const integerDigs = parseFloat(stringNumber.split(".")[0])
+        const decDigs = stringNumber.split(".")[1]
+        let integerDisplay;
 
+        if(isNaN(integerDigs)){
+            integerDisplay = ''
+        }
+        else{
+            integerDisplay = integerDigs.toLocaleString("en")
+        }
+
+        if (decDigs != null){
+            return `${integerDisplay}.${decDigs}`        
+        }
+        else{
+            return integerDisplay
+        }
+        
+    }
     updateDisplay(){
-        this.currentOperandDisplay.innerText = this.currentOperand
+        this.currentOperandDisplay.innerText = this.displayTextComma(this.currentOperand)
         if(this.operation != null){
             this.previousOperandDisplay.innerText = `${this.previousOperand} ${this.operation}`
         }
@@ -90,6 +110,10 @@ document.addEventListener('keydown', function(event){
         calculator.updateDisplay();
     }
     switch(event.key){
+        case ".":
+            calculator.appendNumber(event.key)
+            calculator.updateDisplay();
+            break;
         case "*":
             calculator.addOperation("*");
             calculator.updateDisplay();
