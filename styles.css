@@ -54,6 +54,7 @@ body{
 }
 .clear-operation{
     background-color: #a5a5a5;
+    color: black;
 }
 .clear-operation:hover{
     background-color: #d9d9d9;
